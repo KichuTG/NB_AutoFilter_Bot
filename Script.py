@@ -1,6 +1,5 @@
 class script(object):
-    START_TXT = """<b>​​​ʜɪɪ {} 👋, 
-ɪ ᴀᴍ ᴛʜᴇ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟʟ ᴍᴇᴅɪᴀ ᴘʀᴏᴠɪᴅᴇʀ ʙᴏᴛ. ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇᴅ ᴀʟʟ ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ ᴏʀ ꜱᴇʀɪᴇꜱ. ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ .<blockquote>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/am_films">@ᴀᴍ_ꜰɪʟᴍꜱ</a></blockquote></b>"""
+    START_TXT = """<b>✨ Hello {},</b>\n\n<b>ᴍʏ ɴᴀᴍᴇ ɪꜱ</b> <a href='https://t.me/DramaShip1bot'><b>ᴅʀᴀᴍᴀ ꜱʜɪᴘ ʙᴏᴛ ⎚</b></a>\n\n<b>\n✦ ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴅʀᴀᴍᴀꜱ ꜰᴏʀ ʏᴏᴜ ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏꜰ ᴛʜᴇ ᴅʀᴀᴍᴀ ʏᴏᴜ ɴᴇᴇᴅ😍.\n✦ ɪ ʜᴀᴠᴇ ᴏʟᴅ ᴀɴᴅ ɴᴇᴡ #ᴋᴏʀᴇᴀɴ #ᴄʜɪɴᴇꜱᴇ #ᴊᴀᴘᴀɴᴇꜱᴇ #ᴛʜᴀɪ ᴀɴᴅ ᴍᴏʀᴇ ᴅʀᴀᴍᴀꜱ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ😎. \n✦ ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏꜰ ᴛʜᴇ ᴅʀᴀᴍᴀ ʏᴏᴜ ᴡᴀɴᴛ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴍᴀɢɪᴄ✨️.</b><b>\n\n<blockquote>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/DramaShip">ᴅʀᴀᴍᴀꜱʜɪᴘ</a></blockquote></b>"""
 
     FEATURES_TXT = """<b>ʜᴇʀᴇ ɪꜱ ᴀʟʟ ᴍʏ ꜰᴜɴᴛɪᴏɴꜱ.</b>"""
 
@@ -241,7 +240,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/AM_FILMS">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a https://t.me/AM_FILMS>[@AM_FILMS]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/DramaShip">{file_name}</a></b>\n<b>✪ size- {file_size}</b>\n\n<b>Have A Nice Day 💖</b>\n\n<b>Bot: @DramaShip1bot</b>\n\n<b>⚜️ Powered By : <a href="https://t.me/DramaShip">@ᴅʀᴀᴍᴀꜱʜɪᴘ</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
