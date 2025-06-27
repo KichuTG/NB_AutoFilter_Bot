@@ -152,7 +152,7 @@ async def next_page(bot, query):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
            
             ])
@@ -346,7 +346,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
            
             ])
@@ -361,7 +361,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
            
             ])
@@ -499,7 +499,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
             
             ])
@@ -513,7 +513,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")            
             ])
         if n_offset != "":
@@ -651,7 +651,7 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
 
             ])
@@ -665,7 +665,7 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
             btn.insert(1, [
-		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+		InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
                 InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")            
             ])
         if n_offset != "":
@@ -1487,7 +1487,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 📜', url='https://github.com/NBBotz/Auto-Filter-Bot.git'),
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 📜', url='t.me/DramaShip'),
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='me')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1958,7 +1958,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
         )
         btn.insert(1, [
-	    InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+	    InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
             InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
             
         ])
@@ -1972,7 +1972,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
         )
         btn.insert(1, [
-	    InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AM_FILMS"),
+	    InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DramaShip"),
             InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
             
         ])
