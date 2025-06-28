@@ -5,17 +5,13 @@ import traceback
 from info import *
 from info import URL
 
-async def ping_server():
-    sleep_time = PING_INTERVAL
-    while True:
-        await asyncio.sleep(sleep_time)
-        try:
-            async with aiohttp.ClientSession(
-                timeout=aiohttp.ClientTimeout(total=10)
-            ) as session:
-                async with session.get(URL) as resp:
-                    logging.info("Pinged server with response: {}".format(resp.status))
-        except TimeoutError:
-            logging.warning("Couldn't connect to the site URL..!")
-        except Exception:
-            traceback.print_exc()
+async def keep_alive():
+    """Send a request every 60 seconds to keep the bot alive (if required)."""
+    async with aiohttp.ClientSession() as session:
+        while True:
+            try:
+                await session.get(KEEP_ALIVE_URL)
+                logging.info("Sent keep-alive request.")
+            except Exception as e:
+                logging.error(f"Keep-alive request failed: {e}")
+            await asyncio.sleep(60)
