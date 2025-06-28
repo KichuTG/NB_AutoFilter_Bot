@@ -713,27 +713,45 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
 @Client.on_callback_query(filters.regex(r"^spol"))
 async def advantage_spoll_choker(bot, query):
     _, id, user = query.data.split('#')
+
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+
+    # Get movie info and safely extract title
     movies = await get_poster(id, id=True)
-    movie = movies.get('title')
+    movie = movies.get('title') or "Unknown"
+
+    # Normalize movie title
     movie = re.sub(r"[:-]", " ", movie)
     movie = re.sub(r"\s+", " ", movie).strip()
+
     await query.answer(script.TOP_ALRT_MSG)
+
+    # Search in DB
     files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
+
     if files:
         k = (movie, files, offset, total_results)
         await auto_filter(bot, query, k)
     else:
-        reqstr1 = query.from_user.id if query.from_user else 0
-        reqstr = await bot.get_users(reqstr1)
+        # Get user info
+        reqstr = await bot.get_users(query.from_user.id)
+
+        # Notify in BIN_CHANNEL if enabled
         if NO_RESULTS_MSG:
-            await bot.send_message(chat_id=BIN_CHANNEL,text=script.NORSLTS.format(reqstr.id, reqstr.mention, movie))
+            await bot.send_message(
+                chat_id=BIN_CHANNEL,
+                text=script.NORSLTS.format(reqstr.id, reqstr.mention, movie)
+            )
+
+        # Button to contact admin
         contact_admin_button = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔰Cʟɪᴄᴋ ʜᴇʀᴇ & ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴀᴅᴍɪɴ🔰", url=OWNER_LNK)]])
-        k = await query.message.edit(script.MVE_NT_FND,reply_markup=contact_admin_button)
+            [[InlineKeyboardButton("🔰Cʟɪᴄᴋ ʜᴇʀᴇ & ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴀᴅᴍɪɴ🔰", url=OWNER_LNK)]]
+        )
+
+        msg = await query.message.edit(script.MVE_NT_FND, reply_markup=contact_admin_button)
         await asyncio.sleep(10)
-        await k.delete()
+        await msg.delete()
                 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
